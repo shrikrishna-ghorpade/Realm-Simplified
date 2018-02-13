@@ -15,6 +15,8 @@ Android Studio
 
 ## Acknowledgments
 
-* Free for all. Edit it use it.
-* Inspiration-(https://github.com/gaikwadChetan93)
+* Free for all. Edit it, use it.
+
+Enjoy Coding
+
 
