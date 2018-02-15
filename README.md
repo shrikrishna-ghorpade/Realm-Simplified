@@ -64,8 +64,8 @@ List<MyEntity> myEntities = myRepo.findAll();
 ```
 
 ## What problem it solves
-Ok did you find any realm initilization or any boaring try-catch block for each operations in above code.
-And what about thread management. Want to expand in app database then welcome.
+Ok, did you find any realm initilization or any boaring try-catch block for each operations in above code.
+And what about thread management. You remember transactionBegin(), transactionClose() was everywhere. Want to expand in app database then create two more class and done.
 So it's good use it.
 
 ## Authors
