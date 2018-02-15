@@ -9,14 +9,73 @@ Just clone or download the code in your matchine. Open in Andorid Studio. You wi
 
 Android Studio
 
+### Customize for your use
+
+**Step 1:-Create Entity and attribute as per your application need.
+
+```
+@RealmClass
+public class MyEntity extends RealmObject {
+.
+.
+.
+```
+*This defined the ORM like data structure. With getter and setter methods.
+
+**Step 2:- Create Repository for the entity you deined.
+
+```
+public class MyRepo extends Repository<MyEntity> {
+    public MyRepo(Context context, Class _aClass) {
+        super(context, _aClass);
+    }
+}
+```
+*This is the logical layer for database operations where you get the predefined methods. And offcouse you can operride as per your need or add new for specialization perpose.
+
+**Your database defining coading is done. Now it's time to use.
+
+**Step 3:- Initialize your repository, simply by passing context and the Entity.class. 
+
+```
+MyRepo myRepo = new MyRepo(this, MyEntity.class);
+```
+
+**Step 4:- When ever you want data from realm just ask the repo.
+
+```
+//Hey repo create this record
+myRepo.save(entity);
+
+//Hey repo update this record
+myRepo.saveOrUpdate(entity);
+
+//Hey repo can you please find my record
+MyEntity myEntity = (myEntity) myRepo.findById("******");
+
+//Hey repo give me all data
+List<MyEntity> myEntities = myRepo.findAll();
+
+//Hey repo please show me what other things you can do
+.
+.
+.
+
+```
+
+### What problem it solves
+Ok did you find any realm initilization or any boaring try-catch block for each operations in above code.
+And what about thread management. Want to expand in app database then welcome.
+So it's good use it.
+
 ## Authors
 
-* **Shrikrishna Ghorpade** 
+***Shrikrishna Ghorpade** 
 
 ## Acknowledgments
 
 * Free for all. Edit it, use it.
 
-Enjoy Coding
+**Enjoy Coding
 
 
