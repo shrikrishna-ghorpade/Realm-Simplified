@@ -11,7 +11,7 @@ Android Studio
 
 ### Customize for your use
 
-#### Step 1:-Create Entity and attribute as per your application need.
+#### Step 1:-Create Entity and attribute as per your application's need.
 
 ```
 @RealmClass
@@ -22,7 +22,7 @@ public class MyEntity extends RealmObject {
 ```
 *This defined the ORM like data structure. With getter and setter methods.*
 
-#### Step 2:- Create Repository for the entity you deined.
+#### Step 2:- Create Repository for the entity you defined.
 
 ```
 public class MyRepo extends Repository<MyEntity> {
